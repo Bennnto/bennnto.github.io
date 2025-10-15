@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Ben Promkaew - Modern Portfolio
 
 A modern, responsive portfolio website built with React, Vite, Tailwind CSS, and Framer Motion.
@@ -57,3 +58,7 @@ Simply run `npm run deploy` after making changes.
 =======
 # bennnto.github.io
 >>>>>>> 48fde0d2a55de418c1d36af7a355e6dfa9dee3a8
+=======
+# bennnto.github.io
+Portfolio Page
+>>>>>>> 6ba4ef0ef0c2782a980d8446770821aea04bddd5
