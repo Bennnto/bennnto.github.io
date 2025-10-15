@@ -1,0 +1,100 @@
+import { Github, ExternalLink } from 'lucide-react'
+import AnimatedBackground from './AnimatedBackground'
+
+const Projects = () => {
+  const projects = [
+    {
+      title: 'Inventory Console Application',
+      description: 'A comprehensive inventory management system built with .NET C# for managing stock and products efficiently.',
+      tech: ['.NET C#', 'Console Application'],
+      github: 'https://github.com/Bennnto/-net-space',
+    },
+    {
+      title: 'Selfhost Bookmarks Manager',
+      description: 'A clean, local bookmarks manager designed to save and organize favorite URLs with an intuitive interface.',
+      tech: ['HTML', 'CSS', 'JavaScript'],
+      github: 'https://github.com/Bennnto/URL-Bookmarks',
+    },
+    {
+      title: 'System Monitoring Tool',
+      description: 'A macOS system statistics monitoring utility built with Bash shell scripting for real-time system insights.',
+      tech: ['Bash', 'Shell Scripting'],
+      github: 'https://github.com/Bennnto/simple_system_monitor_Bash',
+    },
+    {
+      title: 'Face Blur Video Processor',
+      description: 'An AI-powered Python application that automatically detects and blurs faces in videos using OpenCV and MediaPipe.',
+      tech: ['Python', 'OpenCV', 'MediaPipe', 'Computer Vision'],
+      github: 'https://github.com/Bennnto',
+    },
+  ]
+
+  return (
+    <section id="projects" className="py-20 bg-gray-50 relative overflow-hidden">
+      <AnimatedBackground />
+      
+      <div className="section-container relative z-10">
+        <div className="text-center mb-16">
+          <h2 className="section-title mb-6">
+            Featured Projects
+          </h2>
+          <div className="w-16 h-px bg-gray-300 mx-auto mb-8" />
+          <p className="section-subtitle">
+            A collection of innovative solutions and creative applications
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+          {projects.map((project, index) => (
+            <div key={index} className="group">
+              <div className="card p-8 h-full">
+                <h3 className="text-2xl font-light text-gray-900 mb-4">
+                  {project.title}
+                </h3>
+                
+                <p className="text-gray-600 font-light leading-relaxed mb-6">
+                  {project.description}
+                </p>
+
+                <div className="flex flex-wrap gap-2 mb-8">
+                  {project.tech.map((tech, techIndex) => (
+                    <span
+                      key={techIndex}
+                      className="px-3 py-1 bg-gray-100 text-gray-700 text-xs font-light tracking-wide uppercase"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-gray-600 hover:text-gray-900 font-light tracking-wide uppercase text-sm transition-colors group-hover:underline"
+                >
+                  <Github className="w-4 h-4" />
+                  View on GitHub
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* View All Projects */}
+        <div className="text-center mt-16">
+          <a
+            href="https://github.com/bennnto"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-secondary"
+          >
+            View All Projects
+          </a>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+export default Projects
