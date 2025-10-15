@@ -54,19 +54,19 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
           <a
             href="#home"
             onClick={(e) => handleClick(e, '#home')}
-            className="text-xl font-light text-gray-900 tracking-wide"
+            className="text-2xl font-black text-gray-900 tracking-tight"
           >
             Ben Promkaew
           </a>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-12">
+          <div className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
                 onClick={(e) => handleClick(e, link.href)}
-                className="text-gray-600 hover:text-gray-900 font-light tracking-wide uppercase text-sm transition-colors"
+                className="text-gray-700 hover:text-gray-900 font-black tracking-wide uppercase text-sm transition-colors px-3 py-2 hover:bg-gray-100 rounded-md"
               >
                 {link.name}
               </a>
@@ -75,7 +75,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
             {/* Dark Mode Toggle */}
             <button
               onClick={toggleDarkMode}
-              className="p-2 text-gray-600 hover:text-gray-900 transition-colors"
+              className="p-2 text-gray-600 hover:text-gray-900 transition-colors ml-4"
             >
               {darkMode ? (
                 <Sun className="w-4 h-4" />
@@ -86,10 +86,10 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="md:hidden flex items-center space-x-4">
+          <div className="md:hidden flex items-center space-x-2">
             <button
               onClick={toggleDarkMode}
-              className="p-2 text-gray-600"
+              className="p-2 text-gray-600 hover:text-gray-900 transition-colors"
             >
               {darkMode ? (
                 <Sun className="w-4 h-4" />
@@ -100,7 +100,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
             
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-600"
+              className="text-gray-600 hover:text-gray-900 transition-colors p-2"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -117,13 +117,13 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
             exit={{ opacity: 0, height: 0 }}
             className="md:hidden bg-white border-t border-gray-200"
           >
-            <div className="px-6 pt-4 pb-6 space-y-4">
+            <div className="px-6 pt-4 pb-6 space-y-6">
               {navLinks.map((link) => (
                 <a
                   key={link.name}
                   href={link.href}
                   onClick={(e) => handleClick(e, link.href)}
-                  className="block text-gray-600 hover:text-gray-900 font-light tracking-wide uppercase text-sm transition-colors"
+                  className="block text-gray-700 hover:text-gray-900 font-black tracking-wide uppercase text-sm transition-colors py-3 px-2 hover:bg-gray-100 rounded-md"
                 >
                   {link.name}
                 </a>
