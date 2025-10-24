@@ -27,6 +27,12 @@ const Projects = () => {
       tech: ['Python', 'OpenCV', 'MediaPipe', 'Computer Vision'],
       github: 'https://github.com/Bennnto',
     },
+    {
+      title: 'Command line interface To-do Lists',
+      description: 'A To-do list in command line interface let you add delete mark your task within command line interface.',
+      tech: ['Python', 'os Module'],
+      github : 'https://github.com/Bennnto/Cli-Todo-list',
+    }
   ]
 
   return (
